@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f7fb; margin: 0; }
+    .container { max-width: 420px; margin: 80px auto; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+    label { display: block; margin-top: 12px; }
+    input { width: 100%; padding: 10px; margin-top: 6px; border-radius: 6px; border: 1px solid #ddd; }
+    button { margin-top: 16px; padding: 10px 16px; border-radius: 8px; border: none; background: #2563eb; color: #fff; cursor: pointer; }
+    a { display: inline-block; margin-top: 12px; color: #2563eb; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <form onsubmit="return fakeLogin(event)">
+      <label>Email
+        <input type="email" required />
+      </label>
+      <label>Password
+        <input type="password" required />
+      </label>
+      <button type="submit">Login</button>
+    </form>
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    function fakeLogin(e) {
+      e.preventDefault();
+      alert('This is a demo login. Hook this to a backend to make it real.');
+      window.location.href = 'index.html';
+      return false;
+    }
+  </script>
+</body>
+</html>
+
